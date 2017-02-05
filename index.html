@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% for image in site.images reversed %}
+  <article class="thumb">
+
+    <a href="fulls/{{ image.id }}.jpg" class="image">
+      <img src="thumbs/{{ image.id }}.jpg" alt="" />
+    </a>
+
+    <h2>{{ image.title }}</h2>
+    <code>{{ image.specs }}</code>
+    <p>{{ image.description }}</p>
+
+  </article>
+{% endfor %}
